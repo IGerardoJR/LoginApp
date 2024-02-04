@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // Vistas
 import './pages/LoginHome.dart';
+import './pages/RegisterPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
               bodyText1: TextStyle(fontFamily: 'ubuntu'),
             )),
         home: Center(
-          child: LoginHome(),
+          child: RegisterPage(),
         ));
   }
 }
