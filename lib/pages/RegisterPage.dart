@@ -64,7 +64,7 @@ class RegisterPage extends StatelessWidget {
                         SizedBox(width: _deviceWidth, child: _textBox('Juan')),
                   ),
                   SizedBox(
-                    height: _deviceHeigth * 0.039,
+                    height: _deviceHeigth * 0.016,
                   ),
                   Container(
                       width: _deviceWidth,
@@ -80,6 +80,26 @@ class RegisterPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
                     child: _textBox('Lopez'),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Container(
+                      width: _deviceWidth,
+                      child: Text(
+                        'Email',
+                        style: TextStyle(
+                            color: Color.fromRGBO(28, 28, 28, 1.0),
+                            fontSize: 20,
+                            fontFamily: "ubuntu",
+                            fontWeight: FontWeight.bold),
+                      )),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
+                    child: _textBox('Email'),
                   ),
                 ],
               ))
