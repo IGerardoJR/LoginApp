@@ -67,7 +67,17 @@ class LoginHome extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  _btnAcceder(),
+                  SizedBox(
+                      height: _deviceHeigth * 0.07,
+                      width: _deviceWidth * 0.40,
+                      child: _btnAcceder()),
+                  SizedBox(
+                    height: _deviceHeigth * 0.03,
+                  ),
+                  SizedBox(
+                      height: _deviceHeigth * 0.07,
+                      width: _deviceWidth * 0.40,
+                      child: _btnRegistrarse())
                 ],
               ),
             ),
@@ -97,6 +107,17 @@ class LoginHome extends StatelessWidget {
           'Acceder',
           style: TextStyle(
               fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold),
+        ));
+  }
+
+  Widget _btnRegistrarse() {
+    return ElevatedButton(
+        onPressed: () => print('Te registraste!'),
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+        child: Text(
+          'Sign up',
+          style: TextStyle(
+              fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
         ));
   }
 

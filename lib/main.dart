@@ -8,15 +8,11 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  late double _deviceWidth;
-  late double _deviceHeigth;
   MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    _deviceWidth = MediaQuery.of(context).size.width;
-    _deviceHeigth = MediaQuery.of(context).size.height;
     return MaterialApp(
         initialRoute: '/',
         routes: {},
