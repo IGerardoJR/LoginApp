@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           )),
       home: SafeArea(
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           body: Column(textDirection: TextDirection.ltr, children: [
             Padding(
               padding: EdgeInsets.fromLTRB(
