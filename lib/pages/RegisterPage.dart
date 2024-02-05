@@ -1,3 +1,4 @@
+import 'package:LoginApp/pages/LoginHome.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -11,152 +12,157 @@ class RegisterPage extends StatelessWidget {
     _deviceWidth = MediaQuery.of(context).size.width;
     _deviceHeigth = MediaQuery.of(context).size.height;
     // TODO: implement build
-    return SafeArea(
-        child: Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-                _deviceWidth * 0.09, _deviceHeigth * 0.12, 0, 0),
-            child: Column(
-              children: [
-                Container(
-                  width: _deviceWidth,
-                  child: Text(
-                    'Register',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "ubuntu",
-                        fontSize: 36,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Container(
-                  width: _deviceWidth,
-                  child: Text(
-                    'Set up a request account creating',
-                    style: TextStyle(
-                      color: Color.fromRGBO(146, 145, 142, 1.0),
-                      fontFamily: "ubuntu",
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+    return MaterialApp(
+      initialRoute: '/home',
+      routes: {'/': (context) => LoginHome()},
+      home: SafeArea(
+          child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        body: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                  _deviceWidth * 0.09, _deviceHeigth * 0.12, 0, 0),
+              child: Column(
+                children: [
+                  Container(
+                    width: _deviceWidth,
+                    child: Text(
+                      'Register',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: "ubuntu",
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
-                ),
-                SizedBox(
-                  height: _deviceHeigth * 0.0391,
-                ),
-                Container(
-                  width: _deviceWidth,
-                  child: Text(
-                    'First name',
-                    style: TextStyle(
-                        color: Color.fromRGBO(63, 63, 63, 1.0),
-                        fontFamily: "ubuntu",
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
-                  child: SizedBox(width: _deviceWidth, child: _textBox('Juan')),
-                ),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Container(
+                  Container(
                     width: _deviceWidth,
-                    child: Text('Last name',
+                    child: Text(
+                      'Set up a request account creating',
+                      style: TextStyle(
+                        color: Color.fromRGBO(146, 145, 142, 1.0),
+                        fontFamily: "ubuntu",
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.0391,
+                  ),
+                  Container(
+                    width: _deviceWidth,
+                    child: Text(
+                      'First name',
+                      style: TextStyle(
+                          color: Color.fromRGBO(63, 63, 63, 1.0),
+                          fontFamily: "ubuntu",
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
+                    child:
+                        SizedBox(width: _deviceWidth, child: _textBox('Juan')),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Container(
+                      width: _deviceWidth,
+                      child: Text('Last name',
+                          style: TextStyle(
+                              color: Color.fromRGBO(28, 28, 28, 1.0),
+                              fontSize: 20,
+                              fontFamily: "ubuntu",
+                              fontWeight: FontWeight.bold))),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
+                    child: _textBox('Lopez'),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Container(
+                      width: _deviceWidth,
+                      child: Text(
+                        'Email',
                         style: TextStyle(
                             color: Color.fromRGBO(28, 28, 28, 1.0),
                             fontSize: 20,
                             fontFamily: "ubuntu",
-                            fontWeight: FontWeight.bold))),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
-                  child: _textBox('Lopez'),
-                ),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Container(
-                    width: _deviceWidth,
-                    child: Text(
-                      'Email',
-                      style: TextStyle(
+                            fontWeight: FontWeight.bold),
+                      )),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
+                    child: _textBox('juan.lopez@tweak.mx'),
+                  ),
+                  SizedBox(
+                    height: _deviceHeigth * 0.016,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Gender',
+                        style: TextStyle(
                           color: Color.fromRGBO(28, 28, 28, 1.0),
-                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                           fontFamily: "ubuntu",
-                          fontWeight: FontWeight.bold),
-                    )),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, _deviceWidth * 0.25, 0),
-                  child: _textBox('juan.lopez@tweak.mx'),
-                ),
-                SizedBox(
-                  height: _deviceHeigth * 0.016,
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'Gender',
-                      style: TextStyle(
-                        color: Color.fromRGBO(28, 28, 28, 1.0),
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "ubuntu",
-                        fontSize: 20,
+                          fontSize: 20,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: _deviceWidth * 0.26,
-                    ),
-                    Text(
-                      'Born Year',
-                      style: TextStyle(
-                        color: Color.fromRGBO(28, 28, 28, 1.0),
-                        fontWeight: FontWeight.bold,
-                        fontFamily: "ubuntu",
-                        fontSize: 20,
+                      SizedBox(
+                        width: _deviceWidth * 0.26,
                       ),
-                    )
-                  ],
-                ),
-                Row(
-                  children: [
-                    _dropDownBox(lista: ListaGeneros),
-                    SizedBox(
-                      width: _deviceWidth * 0.22,
-                    ),
-                    Container(
-                      width: _deviceWidth * 0.35,
-                      height: _deviceHeigth * 0.10,
-                      child: _textBox('1980'),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  width: _deviceWidth * 0.1,
-                ),
-              ],
+                      Text(
+                        'Born Year',
+                        style: TextStyle(
+                          color: Color.fromRGBO(28, 28, 28, 1.0),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "ubuntu",
+                          fontSize: 20,
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      _dropDownBox(lista: ListaGeneros),
+                      SizedBox(
+                        width: _deviceWidth * 0.22,
+                      ),
+                      Container(
+                        width: _deviceWidth * 0.35,
+                        height: _deviceHeigth * 0.10,
+                        child: _textBox('1980'),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    width: _deviceWidth * 0.1,
+                  ),
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-              width: _deviceWidth * 0.43,
-              height: _deviceHeigth * 0.08,
-              child: _btnRegistrarse())
-        ],
-      ),
-    ));
+            SizedBox(
+                width: _deviceWidth * 0.43,
+                height: _deviceHeigth * 0.08,
+                child: _btnRegistrarse())
+          ],
+        ),
+      )),
+    );
   }
 
   // TextBox widget
