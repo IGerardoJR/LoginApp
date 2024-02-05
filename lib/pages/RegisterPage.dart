@@ -13,8 +13,6 @@ class RegisterPage extends StatelessWidget {
     _deviceHeigth = MediaQuery.of(context).size.height;
     // TODO: implement build
     return MaterialApp(
-      initialRoute: '/home',
-      routes: {'/': (context) => LoginHome()},
       home: SafeArea(
           child: Scaffold(
         resizeToAvoidBottomInset: false,
@@ -158,7 +156,7 @@ class RegisterPage extends StatelessWidget {
             SizedBox(
                 width: _deviceWidth * 0.43,
                 height: _deviceHeigth * 0.08,
-                child: _btnRegistrarse())
+                child: _btnRegistrarse(context))
           ],
         ),
       )),
@@ -194,9 +192,12 @@ class RegisterPage extends StatelessWidget {
     );
   }
 
-  Widget _btnRegistrarse() {
+  Widget _btnRegistrarse(BuildContext context) {
     return ElevatedButton(
-        onPressed: () => print('Te registraste!'),
+        onPressed: () => {
+              print('Te registraste!'),
+              Navigator.pop(context),
+            },
         style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
         child: Text(
           'Crear cuenta',

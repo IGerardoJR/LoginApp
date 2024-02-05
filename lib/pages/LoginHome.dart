@@ -14,10 +14,6 @@ class LoginHome extends StatelessWidget {
     _deviceWidth = MediaQuery.of(context).size.width;
     // TODO: implement build
     return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/home': (context) => RegisterPage(),
-      },
       home: SafeArea(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
@@ -123,7 +119,7 @@ class LoginHome extends StatelessWidget {
     return ElevatedButton(
         onPressed: () => {
               print('Te registraste!'),
-              Navigator.of(context, rootNavigator: true).pushNamed('/home')
+              Navigator.pushNamed(context, '/Register')
             },
         style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
         child: Text(
